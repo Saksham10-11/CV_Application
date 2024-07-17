@@ -1,0 +1,11 @@
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.footer-container p {
+  font-style: oblique;
+  color: white;
+  word-spacing: 5px;
+}

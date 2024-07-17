@@ -9,8 +9,8 @@ import "../style.css";
 
 function App() {
   return (
-    <>
-      <div className="header h-fill w-fill">
+    <div className="container">
+      <div className="header w-fill">
         <Header></Header>
       </div>
       <div className="main-container">
@@ -18,7 +18,7 @@ function App() {
           <div className="scrollable-container">
             <PersonalInfo></PersonalInfo>
             <EducationalExp></EducationalExp>
-            <PracticalExp></PracticalExp>
+            {/* <PracticalExp></PracticalExp> */}
           </div>
         </div>
         <div className="document-container">
@@ -28,7 +28,7 @@ function App() {
       <div className="footer">
         <Footer></Footer>
       </div>
-    </>
+    </div>
   );
 }
 

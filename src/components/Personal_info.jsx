@@ -67,7 +67,7 @@ function PersonalInfo() {
             />
           </div>
           <div className="btn">
-            <button>Save</button>
+            <button disabled={!isFormValid()}>Save</button>
           </div>
         </form>
       </div>

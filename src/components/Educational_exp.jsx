@@ -37,8 +37,8 @@ function EducationalExp() {
           <div className="input-container">
             <label htmlFor="fullName">Branch</label>
             <input
-              type="branch"
-              name="text"
+              type="text"
+              name="branch"
               placeholder="Enter your branch"
               id="branch"
               value={collegeBranch}
@@ -49,9 +49,9 @@ function EducationalExp() {
             <label htmlFor="fullName">Address</label>
             <input
               type="text"
-              name="address"
+              name="collegeAddress"
               placeholder="City , Locality"
-              id="address"
+              id="collegeAddress"
               value={collegeAddress}
               onChange={handleChange}
             />
@@ -83,7 +83,7 @@ function EducationalExp() {
             </div>
           </div>
           <div className="btn">
-            <button>Save</button>
+            <button disabled={!isFormValid()}>Save</button>
           </div>
         </form>
       </div>

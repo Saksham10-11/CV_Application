@@ -7,18 +7,14 @@
   font-optical-sizing: auto;
 }
 
-body {
-  /* overflow: hidden; */
-  height: 100%;
-}
-
-#root {
+.container {
+  height: 100vh;
   display: grid;
-  grid-template-rows: 1.5fr 18fr 1fr;
+  grid-template-rows: 1fr 18fr 0.5fr;
 }
 
 .header {
-  background-color: antiquewhite;
+  background-color: rgba(7, 111, 146, 0.73);
 }
 
 .main-container {
@@ -28,17 +24,21 @@ body {
 }
 
 .info-container {
-  background-color: beige;
+  background-color: rgba(197, 191, 191, 0.2);
 }
 
 .scrollable-container {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  height: 89vh;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 1rem;
 }
 
 .document-container {
   background-color: azure;
+}
+
+.footer {
+  background-color: rgba(7, 111, 146, 0.73);
 }
