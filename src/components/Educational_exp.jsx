@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "../styles/GeneralInfo.css";
 
 function EducationalExp() {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  const [college, setCollege] = useState("");
+  const [startCollegeYear, setStartCollegeYear] = useState(null);
+  const [endCollegeYear, setEndCollegeYear] = useState(null);
+  const [collegeBranch, setCollegeBranch] = useState("");
+  const [collegeAddress, setCollegeAddress] = useState("");
 
   const onSubmitForm = (e) => {};
   const handleChange = (e) => {};
@@ -17,41 +18,30 @@ function EducationalExp() {
   return (
     <div className="general-info-container">
       <div className="form-header">
-        <img src="/Images/personal-info.png" alt="" />
-        <h1>Personal Information</h1>
+        <img src="/Images/education-info.png" alt="" />
+        <h1>Educational Information</h1>
       </div>
       <div>
         <form onSubmit={onSubmitForm}>
           <div className="input-container">
-            <label htmlFor="fullName">Full Name</label>
+            <label htmlFor="fullName">College</label>
             <input
               type="text"
-              name="fullName"
-              placeholder="Enter your full name"
-              id="fullName"
-              value={fullName}
+              name="college"
+              placeholder="Name of your college"
+              id="college"
+              value={college}
               onChange={handleChange}
             />
           </div>
           <div className="input-container">
-            <label htmlFor="fullName">Email</label>
+            <label htmlFor="fullName">Branch</label>
             <input
-              type="email"
-              name="email"
-              placeholder="Enter your email"
-              id="email"
-              value={email}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-container">
-            <label htmlFor="fullName">Phone</label>
-            <input
-              type="text"
-              name="phone"
-              placeholder="Enter your phone number"
-              id="phone"
-              value={phone}
+              type="branch"
+              name="text"
+              placeholder="Enter your branch"
+              id="branch"
+              value={collegeBranch}
               onChange={handleChange}
             />
           </div>
@@ -60,11 +50,37 @@ function EducationalExp() {
             <input
               type="text"
               name="address"
-              placeholder="Enter city , locality"
+              placeholder="City , Locality"
               id="address"
-              value={address}
+              value={collegeAddress}
               onChange={handleChange}
             />
+          </div>
+          <div className="input-container">
+            <div className="date-container">
+              <div className="input-date-container">
+                <label htmlFor="fullName">Start Year</label>
+                <input
+                  type="date"
+                  name="startCollegeYear"
+                  placeholder="Starting year"
+                  id="startCollegeYear"
+                  value={startCollegeYear}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="input-date-container">
+                <label htmlFor="fullName">Passing Year</label>
+                <input
+                  type="date"
+                  name="endCollegeYear"
+                  placeholder="Passing year"
+                  id="endCollegeYear"
+                  value={endCollegeYear}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
           </div>
           <div className="btn">
             <button>Save</button>

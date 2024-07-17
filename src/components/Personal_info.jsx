@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/GeneralInfo.css";
 
-function GeneralInfo() {
+function PersonalInfo() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -75,4 +75,4 @@ function GeneralInfo() {
   );
 }
 
-export default GeneralInfo;
+export default PersonalInfo;

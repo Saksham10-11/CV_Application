@@ -20,8 +20,9 @@
 
 .general-info-container .form-header h1 {
   margin-left: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.5rem;
+  font-style: italic;
 }
 
 .general-info-container .form-header img {
@@ -51,6 +52,23 @@
   font-size: 1.1rem;
   padding: 0.25rem 0.6rem;
   background-color: rgba(224, 220, 220, 0.54);
+}
+
+.general-info-container .date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.general-info-container .date-container .input-date-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.general-info-container .date-container .input-date-container label {
+  font-size: 1.2rem;
 }
 
 .general-info-container .btn {

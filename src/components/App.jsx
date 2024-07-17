@@ -1,7 +1,7 @@
 import React from "react";
 import EducationalExp from "./Educational_exp";
 import PracticalExp from "./Practical_exp";
-import GeneralInfo from "./General_info";
+import PersonalInfo from "./Personal_info";
 import Footer from "./Footer";
 import Header from "./Header";
 import Resume from "./Resume";
@@ -15,9 +15,11 @@ function App() {
       </div>
       <div className="main-container">
         <div className="info-container">
-          <GeneralInfo></GeneralInfo>
-          <EducationalExp></EducationalExp>
-          <PracticalExp></PracticalExp>
+          <div className="scrollable-container">
+            <PersonalInfo></PersonalInfo>
+            <EducationalExp></EducationalExp>
+            <PracticalExp></PracticalExp>
+          </div>
         </div>
         <div className="document-container">
           <Resume></Resume>
