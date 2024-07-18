@@ -11,12 +11,13 @@ function PracticalExp(props) {
     e.preventDefault();
     const info_practical = {
       company: company,
-      startYear: startYear,
-      endYear: endYear,
+      startYear: new Date(startYear),
+      endYear: new Date(endYear),
       role: role,
       companyAddress: companyAddress,
     };
     props.saveForm(info_practical);
+    props.setSavedPractical(true);
   };
 
   const handleChange = (e) => {

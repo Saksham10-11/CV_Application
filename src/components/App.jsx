@@ -12,13 +12,18 @@ function App() {
   const [educationalForm, setEducationalForm] = useState(null);
   const [practicalForm, setPracticalForm] = useState(null);
   const [displayData, setDisplayData] = useState(null);
+  const [isDisplaying, setIsDisplaying] = useState(false);
+  const [savedPersonal, setSavedPersonal] = useState(false);
+  const [savedEducational, setSavedEducational] = useState(false);
+  const [savedPractical, setSavedPractical] = useState(false);
 
   function isDataComplete() {
     if (
-      personalForm != null &&
-      educationalForm != null &&
-      practicalForm != null
+      savedPersonal === true &&
+      savedEducational === true &&
+      savedPractical === true
     ) {
+      console.log("Here");
       return true;
     }
     return false;
@@ -26,6 +31,7 @@ function App() {
 
   function displayResume() {
     setDisplayData([personalForm, educationalForm, practicalForm]);
+    setIsDisplaying(true);
   }
 
   return (
@@ -36,20 +42,32 @@ function App() {
       <div className="main-container">
         <div className="info-container">
           <div className="scrollable-container">
-            <PersonalInfo saveForm={setPersonalForm}></PersonalInfo>
-            <EducationalExp saveForm={setEducationalForm}></EducationalExp>
-            <PracticalExp saveForm={setPracticalForm}></PracticalExp>
+            <PersonalInfo
+              saveForm={setPersonalForm}
+              setSavedPersonal={setSavedPersonal}
+            ></PersonalInfo>
+            <EducationalExp
+              saveForm={setEducationalForm}
+              setSavedEducational={setSavedEducational}
+            ></EducationalExp>
+            <PracticalExp
+              saveForm={setPracticalForm}
+              setSavedPractical={setSavedPractical}
+            ></PracticalExp>
             <button
               className="main-button"
               onClick={displayResume}
-              disabled={isDataComplete()}
+              disabled={!isDataComplete()}
             >
               <img src="./Images/build.png" />
             </button>
           </div>
         </div>
         <div className="document-container">
-          <Resume displayData={displayData}></Resume>
+          <Resume
+            displayData={displayData}
+            isDisplaying={isDisplaying}
+          ></Resume>
         </div>
       </div>
       <div className="footer">

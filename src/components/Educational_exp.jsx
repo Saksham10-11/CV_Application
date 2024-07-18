@@ -12,12 +12,13 @@ function EducationalExp(props) {
     e.preventDefault();
     const info_educational = {
       college: college,
-      startCollegeYear: startCollegeYear,
-      endCollegeYear: endCollegeYear,
+      startCollegeYear: new Date(startCollegeYear),
+      endCollegeYear: new Date(endCollegeYear),
       collegeAddress: collegeAddress,
       collegeBranch: collegeBranch,
     };
     props.saveForm(info_educational);
+    props.setSavedEducational(true);
   };
 
   const handleChange = (e) => {

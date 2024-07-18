@@ -18,6 +18,7 @@ function PersonalInfo(props) {
       address: address,
     };
     props.saveForm(info_personal);
+    props.setSavedPersonal(true);
   };
 
   const handleChange = (e) => {

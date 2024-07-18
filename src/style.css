@@ -40,8 +40,7 @@
   height: 3rem;
   border-radius: 1rem;
   background-color: rgba(67, 203, 67, 0.85);
-  margin-top: 0.5rem;
-  margin-left: 18rem;
+  margin: 0.5rem 18rem;
   cursor: pointer;
 }
 
@@ -50,8 +49,10 @@
   height: 2.5rem;
 }
 
-.scrollable-container .main-button button:disabled {
-  background-color: rgba(94, 228, 94, 0.5);
+.scrollable-container button:disabled {
+  /* background-color: rgba(94, 228, 94, 0.5); */
+  background-color: rgba(203, 19, 19, 0.715);
+  cursor: default;
 }
 
 .document-container {
