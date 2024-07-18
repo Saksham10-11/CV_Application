@@ -9,10 +9,39 @@ function EducationalExp() {
   const [collegeAddress, setCollegeAddress] = useState("");
 
   const onSubmitForm = (e) => {};
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    switch (name) {
+      case "college":
+        setCollege(value);
+        break;
+      case "startCollegeYear":
+        setStartCollegeYear(value);
+        break;
+      case "endCollegeYear":
+        setEndCollegeYear(value);
+        break;
+      case "collegeBranch":
+        setCollegeBranch(value);
+        break;
+      case "collegeAddress":
+        setCollegeAddress(value);
+        break;
+    }
+  };
 
   function isFormValid() {
-    return true;
+    if (
+      college != "" &&
+      collegeBranch != "" &&
+      collegeAddress != "" &&
+      startCollegeYear != null &&
+      endCollegeYear != null
+    ) {
+      return true;
+    }
+    return false;
   }
 
   return (

@@ -1,16 +1,46 @@
 import React, { useState } from "react";
 
 function PracticalExp() {
-  const [company, setCollege] = useState("");
+  const [company, setCompany] = useState("");
   const [startYear, setStartYear] = useState(null);
   const [endYear, setEndYear] = useState(null);
   const [role, setRole] = useState("");
   const [companyAddress, setcompanyAddress] = useState("");
 
   const onSubmitForm = (e) => {};
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    switch (name) {
+      case "startYear":
+        setStartYear(value);
+        break;
+      case "endYear":
+        setEndYear(value);
+        break;
+      case "role":
+        setRole(value);
+        break;
+      case "companyAddress":
+        setcompanyAddress(value);
+        break;
+      case "company":
+        setCompany(value);
+        break;
+    }
+  };
 
   function isFormValid() {
+    if (
+      company != "" &&
+      role != "" &&
+      companyAddress != "" &&
+      startYear != null &&
+      endYear != null
+    ) {
+      return true;
+    }
     return false;
   }
 

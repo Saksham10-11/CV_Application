@@ -18,7 +18,7 @@ function App() {
           <div className="scrollable-container">
             <PersonalInfo></PersonalInfo>
             <EducationalExp></EducationalExp>
-            {/* <PracticalExp></PracticalExp> */}
+            <PracticalExp></PracticalExp>
           </div>
         </div>
         <div className="document-container">

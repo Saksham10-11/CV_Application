@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 function Footer() {
   return (
     <div className="footer-container">
-      <p>Copyright @Saksham (2022 - present)</p>
+      <p>Copyright @SakshamSaipatwar</p>
     </div>
   );
 }

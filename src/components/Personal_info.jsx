@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import checkPhone from "../utils/checkPhone";
+import checkEmail from "../utils/checkEmail";
 import "../styles/GeneralInfo.css";
 
 function PersonalInfo() {
@@ -7,11 +9,45 @@ function PersonalInfo() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  const onSubmitForm = (e) => {};
-  const handleChange = (e) => {};
+  const onSubmitForm = (e) => {
+    const info_personal = {
+      fullName: fullName,
+      email: email,
+      phone: phone,
+      address: address,
+    };
+    console.log(info_personal);
+  };
+
+  const handleChange = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+    switch (name) {
+      case "fullName":
+        setFullName(value);
+        break;
+      case "email":
+        setEmail(value);
+        break;
+      case "phone":
+        setPhone(value);
+        break;
+      case "address":
+        setAddress(value);
+        break;
+    }
+  };
 
   function isFormValid() {
-    return true;
+    if (
+      fullName != "" &&
+      checkPhone(phone) &&
+      checkEmail(email) &&
+      address != ""
+    ) {
+      return true;
+    }
+    return false;
   }
 
   return (
