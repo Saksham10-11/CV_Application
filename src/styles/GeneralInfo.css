@@ -16,7 +16,6 @@
   justify-content: flex-start;
   background-color: rgba(147, 141, 141, 0.7);
   padding-left: 1rem;
-  padding-right: 8rem;
 }
 
 .general-info-container .form-header h1 {
@@ -94,4 +93,20 @@
   background-color: rgba(94, 228, 94, 0.5);
   padding: 0.3rem 0.5rem;
   font-size: 1.1rem;
+}
+
+.general-info-container .saved-container {
+  margin: 1rem 1rem;
+}
+
+.general-info-container .form-header button {
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0);
+  border: 0;
+  cursor: pointer;
+}
+
+.general-info-container .form-header button img {
+  height: 2.5rem;
+  width: 2.5rem;
 }

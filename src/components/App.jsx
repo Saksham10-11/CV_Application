@@ -45,14 +45,17 @@ function App() {
             <PersonalInfo
               saveForm={setPersonalForm}
               setSavedPersonal={setSavedPersonal}
+              isSaved={savedPersonal}
             ></PersonalInfo>
             <EducationalExp
               saveForm={setEducationalForm}
               setSavedEducational={setSavedEducational}
+              isSaved={savedEducational}
             ></EducationalExp>
             <PracticalExp
               saveForm={setPracticalForm}
               setSavedPractical={setSavedPractical}
+              isSaved={savedPractical}
             ></PracticalExp>
             <button
               className="main-button"
