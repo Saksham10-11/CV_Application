@@ -1,5 +1,5 @@
 .general-info-container {
-  background-color: azure;
+  background-color: white;
   border: 0;
   border-radius: 0.5rem;
   display: flex;
@@ -82,15 +82,16 @@
 .general-info-container .btn button {
   width: 10rem;
   border-radius: 1rem;
-  background-color: rgba(94, 228, 94, 0.68);
+  background-color: rgba(67, 203, 67, 0.75);
   padding: 0.3rem 0.5rem;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 .general-info-container .btn button:disabled {
   width: 10rem;
   border-radius: 1rem;
-  background-color: rgba(94, 228, 94, 0.3);
+  background-color: rgba(94, 228, 94, 0.5);
   padding: 0.3rem 0.5rem;
   font-size: 1.1rem;
 }

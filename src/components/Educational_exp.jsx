@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import "../styles/GeneralInfo.css";
 
-function EducationalExp() {
-  const [college, setCollege] = useState("");
-  const [startCollegeYear, setStartCollegeYear] = useState(null);
-  const [endCollegeYear, setEndCollegeYear] = useState(null);
-  const [collegeBranch, setCollegeBranch] = useState("");
-  const [collegeAddress, setCollegeAddress] = useState("");
+function EducationalExp(props) {
+  const [college, setCollege] = useState("Vishwakarma Institute");
+  const [startCollegeYear, setStartCollegeYear] = useState("2022-03-25");
+  const [endCollegeYear, setEndCollegeYear] = useState("2022-03-25");
+  const [collegeBranch, setCollegeBranch] = useState("Computer Engineering");
+  const [collegeAddress, setCollegeAddress] = useState("Pune, India");
 
-  const onSubmitForm = (e) => {};
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+    const info_educational = {
+      college: college,
+      startCollegeYear: startCollegeYear,
+      endCollegeYear: endCollegeYear,
+      collegeAddress: collegeAddress,
+      collegeBranch: collegeBranch,
+    };
+    props.saveForm(info_educational);
+  };
+
   const handleChange = (e) => {
     let name = e.target.name;
     let value = e.target.value;

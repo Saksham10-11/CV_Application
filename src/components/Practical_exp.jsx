@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 
-function PracticalExp() {
-  const [company, setCompany] = useState("");
-  const [startYear, setStartYear] = useState(null);
-  const [endYear, setEndYear] = useState(null);
-  const [role, setRole] = useState("");
-  const [companyAddress, setcompanyAddress] = useState("");
+function PracticalExp(props) {
+  const [company, setCompany] = useState("Unique Solutions Ltd.");
+  const [startYear, setStartYear] = useState("2022-03-25");
+  const [endYear, setEndYear] = useState("2022-03-25");
+  const [role, setRole] = useState("Software Developer");
+  const [companyAddress, setcompanyAddress] = useState("Mumbai, India");
 
-  const onSubmitForm = (e) => {};
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+    const info_practical = {
+      company: company,
+      startYear: startYear,
+      endYear: endYear,
+      role: role,
+      companyAddress: companyAddress,
+    };
+    props.saveForm(info_practical);
+  };
+
   const handleChange = (e) => {
     let name = e.target.name;
     let value = e.target.value;

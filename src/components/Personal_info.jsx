@@ -3,20 +3,21 @@ import checkPhone from "../utils/checkPhone";
 import checkEmail from "../utils/checkEmail";
 import "../styles/GeneralInfo.css";
 
-function PersonalInfo() {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+function PersonalInfo(props) {
+  const [fullName, setFullName] = useState("Jhon Watkins");
+  const [email, setEmail] = useState("JhonWat123@gmail.com");
+  const [phone, setPhone] = useState("9823435734");
+  const [address, setAddress] = useState("Pune ,India");
 
   const onSubmitForm = (e) => {
+    e.preventDefault();
     const info_personal = {
       fullName: fullName,
       email: email,
       phone: phone,
       address: address,
     };
-    console.log(info_personal);
+    props.saveForm(info_personal);
   };
 
   const handleChange = (e) => {
